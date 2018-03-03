@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<!--map pin image url: http://www.stickpng.com/img/icons-logos-emojis/pins/black-map-pin 
+globe image url: http://weknownyourdreamz.com/symbol/sl606731.html
+phone image url https://www.flaticon.com/free-icon/phone-call-auricular-symbol-in-black_33260
+fax image url http://simpleicon.com/printer-6.html
+email image url http://freevector.co/vector-icons/interface/new-email-interface-symbol-of-closed-envelope-back.html-->
+<head>
+    <meta charset="UTF-8">
+    <title>Business Card Generator</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Acme|Dancing+Script|Gloria+Hallelujah|Kaushan+Script|Lobster|Poiret+One|Roboto" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+    $(function(){
+        $('button').click(function(){
+            $('div').fadeIn();
+            var name = $('#name').val();
+            var companyName = $('#companyName').val();
+            var position = $('#position').val();
+            var address = $('#address').val();
+            var email = $('#email').val();
+            var phone = $('#phone').val();
+            var faxNum = $('#faxNum').val();
+            var favoriteColor = $('#favColor').val();
+            var fontStyle = $('select').val();
+            var website = $('#website').val();
+            
+            $('h2').html(companyName).css({'color':favoriteColor,'font-family':fontStyle});
+            $('h3').html(name).css({'color':favoriteColor,'font-family':fontStyle});
+            $('h4').html(position).css({'color':favoriteColor,'font-family':fontStyle});
+            $('#address1').html(address).css({'color':favoriteColor,'font-family':fontStyle});
+            $('#website1').html(website).css({'color':favoriteColor,'font-family':fontStyle});
+            $('#phone1').html(phone).css({'color':favoriteColor,'font-family':fontStyle});
+            $('#faxNum1').html(faxNum).css({'color':favoriteColor,'font-family':fontStyle});
+            $('#email1').html(email).css({'color':favoriteColor,'font-family':fontStyle});
+        })
+    });
+    </script>
+</head>
+
+<body>
+ Name: <input id="name"><br>
+ Name of Business or Company Name: <input id="companyName"><br>
+ Title or Position (For ex. owner, graphic designer, manager): <input id="position"><br>
+ Address: <input id="address"><br>
+ Email: <input id="email"><br>
+ Phone Number: <input id="phone"><br>
+ Fax Number: <input id="faxNum"><br>
+ Your Website: <input id="website"><br>
+ Favorite Color: <input id="favColor"><br>
+ Font Style: 
+ <select>
+     <option value='Arial'>Arial</option>
+     <option value='Times New Roman'>Times New Roman</option>
+     <option value='Lobster'>Lobster</option>
+     <option value='Kaushan Script'>Kaushan Script</option>
+     <option value='Abril Fatface'>Abril Fatface</option>
+     <option value='Acme'>Acme</option>
+     <option value='Dancing Script'>Dancing Script</option>
+     <option value='Roboto'>Roboto</option>
+     <option value='Poiret One'>Poiret One</option>
+ </select><br><br>
+ <button>Generate Your Business Card!</button><br><br>
+ <div>
+<h2></h2>
+ <h3></h3>
+ <h4></h4>
+ <img id="mapPin" src="map-pin.png" alt="map pin" width="15" height="15">
+ <span id="address1"></span>
+ <img id="globe" src="globe.png" alt="globe" width="15" height="15">
+ <span id="website1"></span>
+ <span id="phone1"></span>
+ <img id="phoneimg" src="phone.png" alt="phone" width="15" height="15">
+ <span id="faxNum1"></span>
+ <img id="fax" src="fax.png" alt="fax" width="15" height="15">
+ <span id="email1"></span>
+ <img id="mail" src="email.png" alt="mail" width="15" height="15">
+ 
+ </div>
+</body>
+
+</html>
